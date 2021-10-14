@@ -3,9 +3,11 @@
 const items = document.querySelectorAll(".item")
 
 console.log(`Number of categories: ${items.length}`)
+ 
 
 
-
-// items.forEach(element => {
-// console.log(element)
-// });
+ items.forEach(el => {
+ console.log(`category: ${el.querySelector('h2').textContent}`)
+ console.log(`Elements: ${el.querySelectorAll('li').length}`)
+ 
+ });
