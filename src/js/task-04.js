@@ -21,4 +21,4 @@ const increment = () => {
 }
 
 buttonDecrement.addEventListener("click", decrement)
-buttonIncrement.addEventListener("click",increment )
+buttonIncrement.addEventListener("click", increment)
