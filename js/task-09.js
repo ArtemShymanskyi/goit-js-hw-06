@@ -1,19 +1,15 @@
 
-const randomColor = document.querySelector(".widget")
-const span = document.querySelector(".color")
-
-randomColor.addEventListener('click', onButtonClick)
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-function onButtonClick (event) {
-span.textContent = getRandomHexColor()
+const body = document.querySelector('body');
+const span = document.querySelector('.color');
+const btnChangeColor = document.querySelector('.change-color');
 
-if (!event.target.classList.contains('.change-color')) {
-return
-}
-return document.body.style.background = getRandomHexColor();
-};
-
+btnChangeColor.addEventListener('click', event => {
+  const color = getRandomHexColor();
+  body.style.backgroundColor = color;
+  span.textContent = color;
+});
